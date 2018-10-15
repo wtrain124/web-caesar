@@ -46,11 +46,7 @@ def index():
 def encrypt():
     rot= int(request.form['rot'])
     text= request.form['text']
-    cipher= rotate_string(text,rot)
-    message="""
-        <html>
-            <h1>{cipher:}!</h1>
-        </html>
-    """
+    cipher= "<h1>"+rotate_string(text,rot)+"</h1>"
+
     return cipher
 app.run()
